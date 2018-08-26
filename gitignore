@@ -1,0 +1,8 @@
+/logs
+/reports
+/.DS_Store
+/target
+/.gauge
+/.idea
+/docs
+/libs
