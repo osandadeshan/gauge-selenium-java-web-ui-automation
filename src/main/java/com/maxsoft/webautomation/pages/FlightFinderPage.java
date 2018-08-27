@@ -20,11 +20,10 @@ import org.openqa.selenium.support.PageFactory;
 public class FlightFinderPage extends Base {
 
     private WebDriver driver = Driver.driver;
+    private static final String signOutLink = "//a[contains(text(),'Sign Out')]";
 
     @FindBy(xpath = "//a[contains(text(),'SIGN-OFF')]")
     private WebElement LINK_SIGN_OUT;
-
-    private static final String signOutLink = "//a[contains(text(),'Sign Out')]";
 
 
     public FlightFinderPage() {

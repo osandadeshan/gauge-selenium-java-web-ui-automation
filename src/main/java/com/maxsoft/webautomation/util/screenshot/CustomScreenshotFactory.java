@@ -17,9 +17,11 @@ import org.openqa.selenium.WebDriver;
 
 
 public class CustomScreenshotFactory implements ICustomScreenshotGrabber {
+
+    private WebDriver driver = Driver.driver;
+
     // Return a screenshot byte array
     public byte[] takeScreenshot() {
-        WebDriver driver = Driver.driver;
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 

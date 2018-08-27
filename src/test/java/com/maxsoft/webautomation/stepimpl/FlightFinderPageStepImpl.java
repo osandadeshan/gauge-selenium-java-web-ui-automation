@@ -4,6 +4,7 @@ import com.maxsoft.webautomation.pages.FlightFinderPage;
 import com.maxsoft.webautomation.util.driver.Driver;
 import com.thoughtworks.gauge.Step;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -18,7 +19,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FlightFinderPageStepImpl {
 
-    private FlightFinderPage flightFinderPagePage = PageFactory.initElements(Driver.driver, FlightFinderPage.class);
+    private WebDriver driver = Driver.driver;
+    private FlightFinderPage flightFinderPagePage = PageFactory.initElements(driver, FlightFinderPage.class);
 
     @Step("Page title is <pageTitle>")
     public void isPageTitleEquals(String pageTitle) {
