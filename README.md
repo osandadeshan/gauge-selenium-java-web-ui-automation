@@ -75,8 +75,7 @@
 8. Check **Enable Protected Mode** for all zones (Internet, Local intranet, Trusted sites and Restricted sites).
 9. Click on **Apply** button.
 10. Click on **OK** button.
-
-
+<br />
 |Browser    |Version                                |
 |-----------|---------------------------------------|
 |Chrome     |68.0.3440.106 (Official Build) (64-bit)|
@@ -84,5 +83,5 @@
 |IE         |11.228.17134.0			    |
 |Edge       |42.17134.1.0		            |
 
-
+<br />
 Tested on **Windows 10 Core i7 Machine**.
