@@ -1,14 +1,12 @@
 # Setup Guide
-<br /> <br />
+<br />
 
 ## Pre Requisites
 1. Java
 2. Maven
-
-<br /> <br /> <br /> 
+<br />
 
 ## How to Install Gauge Core
-<br />
 
 **On Windows**
 1. Install Chocolatey by executing the following command. \
@@ -17,16 +15,12 @@
 2. Install Gauge by executing the following command. \
 `choco install gauge`
 
-<br /> <br />
-
 **On MacOS**
 1. Update Homebrew. \
 `brew update`
 
 2. Install Gauge using Homebrew. \
 `brew install gauge`
-
-<br /> <br />
 
 **On Linux**
 1. First, add Gauge’s GPG key with this command. \
@@ -38,8 +32,7 @@
 3. Finally, install Gauge using these commands. \
 `sudo apt-get update` \
 `sudo apt-get install gauge`
-
-<br /> <br /> <br />
+<br />
 
 ## How to Install Gauge Plugins
 1. Open Command Prompt and execute following commands. \
@@ -66,8 +59,7 @@
     spectacle (<version number>)
     xml-report (<version number>)
 ```
-
-<br /> <br /> <br />
+<br />
 
 ## Configurations for IE 11 on Windows
 
