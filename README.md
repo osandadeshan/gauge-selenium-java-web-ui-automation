@@ -85,4 +85,5 @@
 |Edge       |42.17134.1.0		            |
 
 <br />
+
 Tested on **Windows 10 Core i7 Machine**.
