@@ -1,4 +1,4 @@
-# Setup Guide
+# Web Cross Browser Automation Demo - Setup Guide
 <br />
 
 ## Pre Requisites
