@@ -16,7 +16,10 @@ import org.openqa.selenium.WebDriver;
  **/
 
 
-public class CustomScreenshotFactory implements ICustomScreenshotGrabber {
+// Using WebDriver public class
+public class CustomScreenshotGrabber implements ICustomScreenshotGrabber {
+
+    public CustomScreenshotGrabber(){}
 
     private WebDriver driver = Driver.driver;
 
