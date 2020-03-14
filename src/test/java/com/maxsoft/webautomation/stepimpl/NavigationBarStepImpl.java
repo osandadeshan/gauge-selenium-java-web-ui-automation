@@ -1,9 +1,8 @@
 package com.maxsoft.webautomation.stepimpl;
 
-import com.maxsoft.webautomation.pages.FlightFinderPage;
+import com.maxsoft.webautomation.pages.NavigationBar;
 import com.maxsoft.webautomation.util.driver.Driver;
 import com.thoughtworks.gauge.Step;
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -17,19 +16,14 @@ import org.openqa.selenium.support.PageFactory;
  **/
 
 
-public class FlightFinderPageStepImpl {
+public class NavigationBarStepImpl {
 
     private WebDriver driver = Driver.driver;
-    private FlightFinderPage flightFinderPagePage = PageFactory.initElements(driver, FlightFinderPage.class);
-
-    @Step("Page title is <pageTitle>")
-    public void isPageTitleEquals(String pageTitle) {
-        Assert.assertEquals("Page title differs!\n", pageTitle, flightFinderPagePage.getPageTitle());
-    }
+    private NavigationBar navigationBar = PageFactory.initElements(driver, NavigationBar.class);
 
     @Step("Sign out from the application")
     public void signOut(){
-        flightFinderPagePage.signOut();
+        navigationBar.signOut();
     }
 
 

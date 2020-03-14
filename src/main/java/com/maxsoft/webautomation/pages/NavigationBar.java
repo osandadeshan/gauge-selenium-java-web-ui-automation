@@ -17,7 +17,7 @@ import org.openqa.selenium.support.PageFactory;
  **/
 
 
-public class FlightFinderPage extends Base {
+public class NavigationBar extends Base {
 
     private WebDriver driver = Driver.driver;
 
@@ -25,12 +25,8 @@ public class FlightFinderPage extends Base {
     private WebElement LINK_SIGN_OUT;
 
 
-    public FlightFinderPage() {
+    public NavigationBar() {
         PageFactory.initElements(driver, this);
-    }
-
-    public String getPageTitle() {
-        return driver.getTitle();
     }
 
     public void signOut(){

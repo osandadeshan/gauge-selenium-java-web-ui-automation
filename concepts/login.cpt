@@ -1,0 +1,16 @@
+<pre>
+Project Name    : web-cross-browser-automation-demo
+Developer       : Osanda Deshan
+Version         : 1.0.0
+Date            : 3/13/2020
+Time            : 2:27 PM
+Description     : This is a concept file
+</pre>
+
+
+
+# Login using the username as <Username> and password as <Password>
+
+* On login page
+* Login to the application using the username as <Username> and password as <Password>
+* Page title is "Find a Flight: Mercury Tours:"

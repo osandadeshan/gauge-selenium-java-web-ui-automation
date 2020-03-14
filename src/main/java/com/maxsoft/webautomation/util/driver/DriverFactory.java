@@ -1,6 +1,6 @@
 package com.maxsoft.webautomation.util.driver;
 
-import io.github.bonigarcia.wdm.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -26,7 +26,6 @@ public class DriverFactory {
     private static final String BROWSER = System.getenv("browser");
     private static final String WINDOW_WIDTH = System.getenv("window_width");
     private static final String WINDOW_HEIGHT = System.getenv("window_height");
-    private static final String CHROME = "chrome";
     private static final String HEADLESS_CHROME = "headless-chrome";
     private static final String FIREFOX = "firefox";
     private static final String HEADLESS_FIREFOX = "headless-firefox";
@@ -48,9 +47,6 @@ public class DriverFactory {
         }
         switch (BROWSER.toLowerCase())
         {
-            case CHROME:
-                WebDriverManager.chromedriver().setup();
-                return new ChromeDriver();
             case HEADLESS_CHROME:
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless");
@@ -60,6 +56,7 @@ public class DriverFactory {
                 chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
                 chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
                 chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
+                WebDriverManager.chromedriver().setup();
                 return new ChromeDriver(chromeOptions);
             case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
