@@ -25,23 +25,23 @@ public abstract class Base {
         PageFactory.initElements(driver, this);
     }
 
-    protected void waitForElementClickable(WebElement element){
+    protected void waitUntilElementIsClickable(WebElement element){
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    protected void waitForElementVisible(WebElement element){
+    protected void waitUntilElementIsVisible(WebElement element){
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    protected void setTextAs(WebElement element, String text){
-        waitForElementClickable(element);
+    protected void inputText(WebElement element, String text){
+        waitUntilElementIsClickable(element);
         element.sendKeys(text);
     }
 
     protected void clickElement(WebElement element){
-        waitForElementClickable(element);
+        waitUntilElementIsClickable(element);
         element.click();
     }
 
@@ -52,12 +52,12 @@ public abstract class Base {
     }
 
     protected void clickLink(WebElement element){
-        waitForElementVisible(element);
+        waitUntilElementIsVisible(element);
         element.click();
     }
 
     protected String getText(WebElement element){
-        waitForElementVisible(element);
+        waitUntilElementIsVisible(element);
         return element.getText();
     }
 

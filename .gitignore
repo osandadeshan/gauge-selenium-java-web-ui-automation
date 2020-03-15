@@ -3,7 +3,6 @@
 /.idea
 /logs
 /reports
-/smart_flashcards_api_test_automation.iml
 /*.iml
 /out
 /gauge_bin

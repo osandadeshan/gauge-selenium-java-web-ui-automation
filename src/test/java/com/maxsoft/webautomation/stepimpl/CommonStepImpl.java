@@ -21,7 +21,7 @@ public class CommonStepImpl {
 
     @Step("Page title is <pageTitle>")
     public void isPageTitleEquals(String pageTitle) {
-        Assert.assertEquals("Page title differs!\n", pageTitle, driver.getTitle());
+        Assert.assertEquals("Expected page title is not equal to the actual page title!\n", pageTitle, driver.getTitle());
     }
 
 

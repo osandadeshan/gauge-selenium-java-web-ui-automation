@@ -24,7 +24,6 @@ public class NavigationBar extends Base {
     @FindBy(xpath = "//a[contains(text(),'SIGN-OFF')]")
     private WebElement LINK_SIGN_OUT;
 
-
     public NavigationBar() {
         PageFactory.initElements(driver, this);
     }

@@ -31,7 +31,6 @@ public class LoginPage extends Base {
     @FindBy(xpath = "//input[@name='login']")
     private WebElement BTN_SIGN_IN;
 
-
     public LoginPage() {
         PageFactory.initElements(driver, this);
     }
@@ -41,8 +40,8 @@ public class LoginPage extends Base {
     }
 
     public void login(String username, String password){
-        setTextAs(TXT_USERNAME, username);
-        setTextAs(TXT_PASSWORD, password);
+        inputText(TXT_USERNAME, username);
+        inputText(TXT_PASSWORD, password);
         clickElement(BTN_SIGN_IN);
     }
 
