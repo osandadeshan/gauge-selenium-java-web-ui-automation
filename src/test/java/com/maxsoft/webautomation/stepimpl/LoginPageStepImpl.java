@@ -15,21 +15,18 @@ import org.openqa.selenium.support.PageFactory;
  * Description  :
  **/
 
-
 public class LoginPageStepImpl {
 
-    private WebDriver driver = Driver.driver;
-    private LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+    private final WebDriver driver = Driver.driver;
+    private final LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 
     @Step("On login page")
     public void navigateToLogin(){
         loginPage.navigateToLogin();
     }
 
-    @Step("Login to the application using the username as <username> and password as <password>")
-    public void login(String username, String password){
-        loginPage.login(username, password);
+    @Step("Login to the application using the email as <email> and password as <password>")
+    public void login(String email, String password){
+        loginPage.login(email, password);
     }
-
-
 }

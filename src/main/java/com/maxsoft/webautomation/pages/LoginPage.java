@@ -16,19 +16,18 @@ import org.openqa.selenium.support.PageFactory;
  * Description  :
  **/
 
-
 public class LoginPage extends Base {
 
-    private static String LoginPageUrl = URL;
-    private WebDriver driver = Driver.driver;
+    private static final String LoginPageUrl = URL;
+    private final WebDriver driver = Driver.driver;
 
-    @FindBy(xpath = "//input[@name='userName']")
-    private WebElement TXT_USERNAME;
+    @FindBy(id = "email")
+    private WebElement TXT_EMAIL;
 
-    @FindBy(xpath = "//input[@name='password']")
+    @FindBy(id = "passwd")
     private WebElement TXT_PASSWORD;
 
-    @FindBy(xpath = "//input[@name='login']")
+    @FindBy(id = "SubmitLogin")
     private WebElement BTN_SIGN_IN;
 
     public LoginPage() {
@@ -39,11 +38,9 @@ public class LoginPage extends Base {
         driver.get(LoginPageUrl);
     }
 
-    public void login(String username, String password){
-        inputText(TXT_USERNAME, username);
+    public void login(String email, String password){
+        inputText(TXT_EMAIL, email);
         inputText(TXT_PASSWORD, password);
         clickElement(BTN_SIGN_IN);
     }
-
-
 }

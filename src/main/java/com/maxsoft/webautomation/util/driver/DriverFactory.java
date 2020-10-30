@@ -20,7 +20,6 @@ import org.openqa.selenium.safari.SafariDriver;
  * Description  :
  **/
 
-
 public class DriverFactory {
 
     private static final String BROWSER = System.getenv("browser");
@@ -33,12 +32,6 @@ public class DriverFactory {
     private static final String EDGE = "edge";
     private static final String SAFARI = "safari";
     private static final String WINDOW_SIZE = "--window-size="+WINDOW_WIDTH+"x"+WINDOW_HEIGHT;
-
-    private static WebDriver driver;
-
-    // Get a new WebDriver Instance.
-    // There are various implementations for this depending on browser. The required BROWSER can be set as an environment variable.
-    // Refer http://getgauge.io/documentation/user/current/managing_environments/README.html
 
     public static WebDriver getDriver() {
         if (BROWSER == null) {
@@ -76,13 +69,10 @@ public class DriverFactory {
                 WebDriverManager.edgedriver().setup();
                 return new EdgeDriver();
             case SAFARI:
-                driver = new SafariDriver();
                 return new SafariDriver();
             default:
                 WebDriverManager.chromedriver().setup();
                 return new ChromeDriver();
         }
     }
-
-
 }

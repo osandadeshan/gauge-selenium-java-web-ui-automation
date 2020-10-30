@@ -15,11 +15,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
  * Description  :
  **/
 
-
 public abstract class Base {
 
     protected static String URL = System.getenv("application_endpoint");
-    private WebDriver driver = Driver.driver;
+    private final WebDriver driver = Driver.driver;
 
     public Base() {
         PageFactory.initElements(driver, this);
@@ -68,6 +67,4 @@ public abstract class Base {
             e.printStackTrace();
         }
     }
-
-
 }

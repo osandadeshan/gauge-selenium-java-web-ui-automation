@@ -15,16 +15,13 @@ import org.openqa.selenium.support.PageFactory;
  * Description  :
  **/
 
-
 public class NavigationBarStepImpl {
 
-    private WebDriver driver = Driver.driver;
-    private NavigationBar navigationBar = PageFactory.initElements(driver, NavigationBar.class);
+    private final WebDriver driver = Driver.driver;
+    private final NavigationBar navigationBar = PageFactory.initElements(driver, NavigationBar.class);
 
     @Step("Sign out from the application")
     public void signOut(){
         navigationBar.signOut();
     }
-
-
 }

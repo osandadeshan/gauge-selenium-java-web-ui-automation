@@ -16,21 +16,17 @@ import org.openqa.selenium.support.PageFactory;
  * Description  :
  **/
 
-
 public class NavigationBar extends Base {
 
-    private WebDriver driver = Driver.driver;
-
-    @FindBy(xpath = "//a[contains(text(),'SIGN-OFF')]")
+    @FindBy(xpath = "//a[@title='Log me out']")
     private WebElement LINK_SIGN_OUT;
 
     public NavigationBar() {
+        WebDriver driver = Driver.driver;
         PageFactory.initElements(driver, this);
     }
 
     public void signOut(){
         clickElement(LINK_SIGN_OUT);
     }
-
-
 }

@@ -14,15 +14,12 @@ import org.openqa.selenium.WebDriver;
  * Description     :
  **/
 
-
 public class CommonStepImpl {
 
-    private WebDriver driver = Driver.driver;
+    private final WebDriver driver = Driver.driver;
 
     @Step("Page title is <pageTitle>")
     public void isPageTitleEquals(String pageTitle) {
         Assert.assertEquals("Expected page title is not equal to the actual page title!\n", pageTitle, driver.getTitle());
     }
-
-
 }
