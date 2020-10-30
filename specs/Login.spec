@@ -15,4 +15,4 @@ table: ./src/test/resources/test data/test users.csv
 ## Login to the application using invalid email and invalid password
 * On login page
 * Login to the application using the email as "osa@mailinator.com" and password as "admin123"
-* Page title is "Logi - My Store"
+* Page title is "Login - My Store"
