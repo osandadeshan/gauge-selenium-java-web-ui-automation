@@ -31,23 +31,22 @@ public class DriverFactory {
     private static final String IE = "ie";
     private static final String EDGE = "edge";
     private static final String SAFARI = "safari";
-    private static final String WINDOW_SIZE = "--window-size="+WINDOW_WIDTH+"x"+WINDOW_HEIGHT;
+    private static final String WINDOW_SIZE = "--window-size=" + WINDOW_WIDTH + "x" + WINDOW_HEIGHT;
 
     public static WebDriver getDriver() {
         if (BROWSER == null) {
             WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
         }
-        switch (BROWSER.toLowerCase())
-        {
+        switch (BROWSER.toLowerCase()) {
             case HEADLESS_CHROME:
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless");
-                chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
-                chromeOptions.addArguments("disable-infobars"); // disabling infobars
-                chromeOptions.addArguments("--disable-extensions"); // disabling extensions
-                chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
-                chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                chromeOptions.addArguments("start-maximized"); // Open Browser in maximized mode
+                chromeOptions.addArguments("disable-infobars"); // Disabling info bars
+                chromeOptions.addArguments("--disable-extensions"); // Disabling extensions
+                chromeOptions.addArguments("--disable-gpu"); // Applicable to windows os only
+                chromeOptions.addArguments("--disable-dev-shm-usage"); // Overcome limited resource problems
                 chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
                 WebDriverManager.chromedriver().setup();
                 return new ChromeDriver(chromeOptions);

@@ -1,7 +1,7 @@
 package com.maxsoft.webautomation.util.driver;
 
-import com.thoughtworks.gauge.AfterSuite;
-import com.thoughtworks.gauge.BeforeSuite;
+import com.thoughtworks.gauge.AfterScenario;
+import com.thoughtworks.gauge.BeforeScenario;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -13,21 +13,21 @@ import org.openqa.selenium.WebDriver;
  * Description  :
  **/
 
-public class Driver {
+public class DriverHolder {
 
     // Holds the WebDriver instance
     public static WebDriver driver;
 
     // Initialize a driver instance of required browser
-    @BeforeSuite
-    public void initializeDriver(){
+    @BeforeScenario
+    public void initializeDriver() {
         driver = DriverFactory.getDriver();
         driver.manage().window().maximize();
     }
 
     // Close the driver instance
-    @AfterSuite
-    public void closeDriver(){
+    @AfterScenario
+    public void closeDriver() {
         driver.quit();
     }
 }

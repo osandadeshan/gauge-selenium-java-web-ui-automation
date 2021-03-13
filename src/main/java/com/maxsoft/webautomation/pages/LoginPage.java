@@ -1,11 +1,11 @@
 package com.maxsoft.webautomation.pages;
 
-import com.maxsoft.webautomation.common.Base;
-import com.maxsoft.webautomation.util.driver.Driver;
+import com.maxsoft.webautomation.common.SeleniumWrapper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+
+import static com.maxsoft.webautomation.common.Constants.APP_URL;
 
 /**
  * Project Name : Web-Cross-Browser-Automation-Demo
@@ -16,10 +16,7 @@ import org.openqa.selenium.support.PageFactory;
  * Description  :
  **/
 
-public class LoginPage extends Base {
-
-    private static final String LoginPageUrl = URL;
-    private final WebDriver driver = Driver.driver;
+public class LoginPage extends SeleniumWrapper {
 
     @FindBy(id = "email")
     private WebElement TXT_EMAIL;
@@ -30,15 +27,15 @@ public class LoginPage extends Base {
     @FindBy(id = "SubmitLogin")
     private WebElement BTN_SIGN_IN;
 
-    public LoginPage() {
-        PageFactory.initElements(driver, this);
+    public LoginPage(WebDriver driver) {
+        super(driver);
     }
 
-    public void navigateToLogin(){
-        driver.get(LoginPageUrl);
+    public void navigateToLoginPage() {
+        driver.get(APP_URL);
     }
 
-    public void login(String email, String password){
+    public void login(String email, String password) {
         inputText(TXT_EMAIL, email);
         inputText(TXT_PASSWORD, password);
         clickElement(BTN_SIGN_IN);

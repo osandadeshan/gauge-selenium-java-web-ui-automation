@@ -1,9 +1,8 @@
 package com.maxsoft.webautomation.stepimpl;
 
 import com.maxsoft.webautomation.pages.NavigationBar;
-import com.maxsoft.webautomation.util.driver.Driver;
+import com.maxsoft.webautomation.util.driver.DriverHolder;
 import com.thoughtworks.gauge.Step;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -17,11 +16,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class NavigationBarStepImpl {
 
-    private final WebDriver driver = Driver.driver;
-    private final NavigationBar navigationBar = PageFactory.initElements(driver, NavigationBar.class);
+    private final NavigationBar navigationBar = PageFactory.initElements(DriverHolder.driver, NavigationBar.class);
 
     @Step("Sign out from the application")
-    public void signOut(){
+    public void signOut() {
         navigationBar.signOut();
     }
 }

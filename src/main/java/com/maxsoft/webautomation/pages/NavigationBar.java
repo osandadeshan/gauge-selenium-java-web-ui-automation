@@ -1,11 +1,9 @@
 package com.maxsoft.webautomation.pages;
 
-import com.maxsoft.webautomation.common.Base;
-import com.maxsoft.webautomation.util.driver.Driver;
+import com.maxsoft.webautomation.common.SeleniumWrapper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 /**
  * Project Name : Web-Cross-Browser-Automation-Demo
@@ -16,17 +14,16 @@ import org.openqa.selenium.support.PageFactory;
  * Description  :
  **/
 
-public class NavigationBar extends Base {
+public class NavigationBar extends SeleniumWrapper {
 
     @FindBy(xpath = "//a[@title='Log me out']")
     private WebElement LINK_SIGN_OUT;
 
-    public NavigationBar() {
-        WebDriver driver = Driver.driver;
-        PageFactory.initElements(driver, this);
+    public NavigationBar(WebDriver driver) {
+        super(driver);
     }
 
-    public void signOut(){
+    public void signOut() {
         clickElement(LINK_SIGN_OUT);
     }
 }

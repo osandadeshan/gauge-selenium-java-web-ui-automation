@@ -1,9 +1,8 @@
 package com.maxsoft.webautomation.stepimpl;
 
 import com.maxsoft.webautomation.pages.LoginPage;
-import com.maxsoft.webautomation.util.driver.Driver;
+import com.maxsoft.webautomation.util.driver.DriverHolder;
 import com.thoughtworks.gauge.Step;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -17,16 +16,15 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPageStepImpl {
 
-    private final WebDriver driver = Driver.driver;
-    private final LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+    private final LoginPage loginPage = PageFactory.initElements(DriverHolder.driver, LoginPage.class);
 
     @Step("On login page")
-    public void navigateToLogin(){
-        loginPage.navigateToLogin();
+    public void navigateToLoginPage() {
+        loginPage.navigateToLoginPage();
     }
 
     @Step("Login to the application using the email as <email> and password as <password>")
-    public void login(String email, String password){
+    public void login(String email, String password) {
         loginPage.login(email, password);
     }
 }

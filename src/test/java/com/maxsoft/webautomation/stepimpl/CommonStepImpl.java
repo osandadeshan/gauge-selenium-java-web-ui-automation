@@ -1,9 +1,10 @@
 package com.maxsoft.webautomation.stepimpl;
 
-import com.maxsoft.webautomation.util.driver.Driver;
+import com.maxsoft.webautomation.util.driver.DriverHolder;
 import com.thoughtworks.gauge.Step;
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Project Name    : web-cross-browser-automation-demo
@@ -16,10 +17,10 @@ import org.openqa.selenium.WebDriver;
 
 public class CommonStepImpl {
 
-    private final WebDriver driver = Driver.driver;
+    private final WebDriver driver = DriverHolder.driver;
 
     @Step("Page title is <pageTitle>")
-    public void isPageTitleEquals(String pageTitle) {
-        Assert.assertEquals("Expected page title is not equal to the actual page title!\n", pageTitle, driver.getTitle());
+    public void checkPageTitle(String pageTitle) {
+        assertEquals(pageTitle, driver.getTitle());
     }
 }

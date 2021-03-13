@@ -1,6 +1,6 @@
 package com.maxsoft.webautomation.util.screenshot;
 
-import com.maxsoft.webautomation.util.driver.Driver;
+import com.maxsoft.webautomation.util.driver.DriverHolder;
 import com.thoughtworks.gauge.screenshot.ICustomScreenshotGrabber;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -14,13 +14,13 @@ import org.openqa.selenium.TakesScreenshot;
  * Description  :
  **/
 
-// Using WebDriver public class
 public class CustomScreenshotGrabber implements ICustomScreenshotGrabber {
 
-    public CustomScreenshotGrabber(){}
+    public CustomScreenshotGrabber() {
+    }
 
     // Return a screenshot byte array
     public byte[] takeScreenshot() {
-        return ((TakesScreenshot) Driver.driver).getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot) DriverHolder.driver).getScreenshotAs(OutputType.BYTES);
     }
 }
