@@ -1,4 +1,4 @@
-# Web Cross Browser Automation Demo
+# Gauge Web UI Automation Demo
 
 ## Pre Requisites
 1. Java
