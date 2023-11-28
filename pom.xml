@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.maxsoft.webautomation</groupId>
-    <artifactId>web-cross-browser-automation-demo</artifactId>
+    <artifactId>gauge-web-ui-automation-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
