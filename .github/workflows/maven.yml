@@ -41,7 +41,7 @@ jobs:
           chrome-version: 'latest'
           
       - name: Install Gauge using CURL
-        run: curl -SsL https://downloads.gauge.org/stable | sh
+        run: npm install -g @getgauge/cli
 
       - name: Install Gauge-Java plugin
         run: gauge install java --version 0.7.4
