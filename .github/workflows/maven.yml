@@ -34,17 +34,17 @@ jobs:
           wget -q https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
           tar -xzf apache-maven-3.6.3-bin.tar.gz
           export PATH=$(pwd)/apache-maven-3.6.3/bin:$PATH
-
-      - name: Set up Chrome browser
-        uses: browser-actions/setup-chrome@latest
-        with:
-          chrome-version: 'latest'
           
       - name: Install Gauge using CURL
         run: npm install -g @getgauge/cli
 
       - name: Install Gauge-Java plugin
         run: gauge install java --version 0.10.3
+
+      - name: Set up Chrome browser
+        uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: 'latest'
 
   test:
     runs-on: ubuntu-latest
