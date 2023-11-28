@@ -64,6 +64,9 @@ jobs:
           echo "Chrome version:"
           google-chrome --version
 
+          echo "Gauge version:"
+          gauge -v
+
       - name: Execute regression test suite
         run: mvn test-compile gauge:execute -DspecsDir="specs" -Denv="dev"
         
