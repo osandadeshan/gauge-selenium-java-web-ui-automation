@@ -44,7 +44,7 @@ jobs:
         run: npm install -g @getgauge/cli
 
       - name: Install Gauge-Java plugin
-        run: gauge install java --version 0.7.4
+        run: gauge install java --version 0.10.3
 
   test:
     runs-on: ubuntu-latest
