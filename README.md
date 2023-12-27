@@ -1,4 +1,4 @@
-# Gauge Web UI Automation Demo
+# Gauge Java Web UI Automation Demo
 
 ## Pre Requisites
 1. Java
