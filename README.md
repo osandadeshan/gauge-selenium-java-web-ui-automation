@@ -2,7 +2,7 @@
 
 This project serves as a boilerplate for automating web applications across various browsers and environments using Gauge and Selenium.
 
-[![Gauge Selenium Java Web UI Automation CI](https://github.com/osandadeshan/gauge-java-web-ui-automation-demo/actions/workflows/maven.yml/badge.svg)](https://github.com/osandadeshan/gauge-java-web-ui-automation-demo/actions/workflows/maven.yml)
+[![Gauge Selenium Java Web UI Automation CI](https://github.com/osandadeshan/gauge-selenium-java-web-ui-automation/actions/workflows/gauge-selenium-java-ci.yml/badge.svg)](https://github.com/osandadeshan/gauge-selenium-java-web-ui-automation/actions/workflows/gauge-selenium-java-ci.yml)
 
 ## Pre-requisites
 1. Java
