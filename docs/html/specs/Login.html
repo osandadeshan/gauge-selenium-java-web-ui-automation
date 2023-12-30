@@ -1,29 +1,23 @@
-<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="..\style.css"><h1>Login Specification</h1>
-<p>&lt;pre&gt;
-Date Created         : 02/09/2018
-Version   		     : 1.0.0
-Owner      		     : Osanda Deshan
-Description  	     : This is an executable specification file which covers the login scenarios.
-Run in dev env       : mvn test-compile gauge:execute -DspecsDir=&quot;specs&quot; -Denv=&quot;dev&quot;
-Run With Tags        : mvn test-compile gauge:execute -DspecsDir=&quot;specs&quot; -Denv=&quot;dev&quot; -Dtags=&quot;positive&quot;
-Run In Parallel      : mvn test-compile gauge:execute -DspecsDir=&quot;specs&quot; -Denv=&quot;dev&quot; -DinParallel=true
-Re-run Failures      : mvn test-compile gauge:execute -Dflags=&quot;--failed&quot;
-Format Specs         : gauge format docs
-Convert Specs To HTML: gauge docs spectacle specs
-&lt;/pre&gt;</p>
-<p>table: ./src/test/resources/test data/test users.csv
-tags: login</p>
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../style.css"><h1>Login Specification</h1>
+<p>Project Name    : gauge-java-web-ui-automation-demo
+Developer       : Osanda Deshan
+Version         : 1.0.0
+Date            : 30/12/23
+Time            : 11:40 AM
+Description     : This is an executable specification file which covers the login scenarios.</p>
+<p>table: ./src/test/resources/test data/test users.csv</p>
+<p>tags: login</p>
 <h2>Login to the application using valid email and valid password</h2>
 <p>tags: positive</p>
 <ul>
-<li>Login using the email as &lt;Email&gt; and password as &lt;Password&gt;</li>
-<li>Signout</li>
+<li>Login using the username as &lt;Username&gt; and password as &lt;Password&gt;</li>
+<li>Logged-in username should be &lt;Username&gt;</li>
 </ul>
 <h2>Login to the application using invalid email and invalid password</h2>
 <p>tags: negative</p>
 <ul>
 <li>On login page</li>
-<li>Login to the application using the email as &quot;osa@<a href="http://mailinator.com" rel="nofollow">mailinator.com</a>&quot; and password as &quot;admin123&quot;</li>
-<li>Page title is &quot;Login - My Store&quot;</li>
+<li>Login to the application using the username as &quot;dev-test&quot; and password as &quot;admin123&quot;</li>
+<li>Wrong password error alert should be visible</li>
 </ul>
-<ul id="navigation"><center><li class="nav"><a href="..\index.html">=</a></li></center></article>
+<ul id="navigation"><center><li class="nav"><a href="../index.html">=</a></li><li class="nav"><a href="./navigation.html">></a></li></center></article>

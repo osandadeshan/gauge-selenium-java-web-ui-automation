@@ -1,2 +1,2 @@
-var tags = ["login", "positive", "negative"]
-var specs = [{"path":"specs\\login.html","name":"Login Specification","scenarios":[{"name":"Login to the application using valid email and valid password","tags":["positive","login"]},{"name":"Login to the application using invalid email and invalid password","tags":["negative","login"]}]}]
+var tags = ["positive", "negative", "navigation", "login"]
+var specs = [{"path":"specs/login.html","name":"Login Specification","scenarios":[{"name":"Login to the application using valid email and valid password","tags":["positive","login"]},{"name":"Login to the application using invalid email and invalid password","tags":["negative","login"]}]},{"path":"specs/navigation.html","name":"Navigation Specification","scenarios":[{"name":"Navigation bar option routing","tags":["positive","navigation"]}]}]
