@@ -245,4 +245,5 @@ The following plugin properties can be additionally set:
     
 10. Click on "**OK**" button.
 
+**Note:**
 Tested using a **Windows 10 Core i7 Machine**.
