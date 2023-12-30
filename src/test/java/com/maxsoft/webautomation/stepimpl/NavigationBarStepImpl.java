@@ -1,25 +1,33 @@
 package com.maxsoft.webautomation.stepimpl;
 
-import com.maxsoft.webautomation.pages.NavigationBar;
-import com.maxsoft.webautomation.util.driver.DriverHolder;
 import com.thoughtworks.gauge.Step;
-import org.openqa.selenium.support.PageFactory;
+import com.thoughtworks.gauge.Table;
+import com.thoughtworks.gauge.TableRow;
+
+import static com.maxsoft.webautomation.common.constant.ApplicationConstants.APPLICATION_URL;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Project Name : Web-Cross-Browser-Automation-Demo
- * Developer    : Osanda Deshan
- * Version      : 1.0.0
- * Date         : 8/25/2018
- * Time         : 2:37 PM
- * Description  :
+ * Project Name    : gauge-java-web-ui-automation-demo
+ * Developer       : Osanda Deshan
+ * Version         : 1.0.0
+ * Date            : 29/12/23
+ * Time            : 10:20 PM
+ * Description     :
  **/
 
-public class NavigationBarStepImpl {
-
-    private final NavigationBar navigationBar = PageFactory.initElements(DriverHolder.driver, NavigationBar.class);
-
-    @Step("Sign out from the application")
-    public void signOut() {
-        navigationBar.signOut();
+public class NavigationBarStepImpl extends BaseStepImpl {
+    @Step("The navigation bar option should route to the following URLs <table>")
+    public void checkNavigationBarOptionRouting(Table table) {
+        for (TableRow row : table.getTableRows()) {
+            assertEquals(
+                    APPLICATION_URL.concat(row.getCell(table.getColumnName(1))),
+                    pages().getNavigationBar()
+                            .getNavigationOptionElement(
+                                    row.getCell(table.getColumnName(0))
+                            )
+                            .getAttribute("href")
+            );
+        }
     }
 }

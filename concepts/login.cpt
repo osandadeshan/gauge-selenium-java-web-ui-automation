@@ -5,8 +5,7 @@ Date            : 3/13/2020
 Time            : 2:27 PM
 Description     : This is a concept file
 
-# Login using the email as <Email> and password as <Password>
+# Login using the username as <Username> and password as <Password>
 
 * On login page
-* Login to the application using the email as <Email> and password as <Password>
-* Page title is "My account - My Store"
+* Login to the application using the username as <Username> and password as <Password>

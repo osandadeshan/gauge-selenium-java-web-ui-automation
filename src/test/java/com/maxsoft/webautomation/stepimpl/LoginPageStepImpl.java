@@ -1,9 +1,9 @@
 package com.maxsoft.webautomation.stepimpl;
 
-import com.maxsoft.webautomation.pages.LoginPage;
-import com.maxsoft.webautomation.util.driver.DriverHolder;
 import com.thoughtworks.gauge.Step;
-import org.openqa.selenium.support.PageFactory;
+
+import static com.maxsoft.webautomation.common.constant.NavigationBarOption.LOG_IN;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Project Name : Web-Cross-Browser-Automation-Demo
@@ -14,17 +14,33 @@ import org.openqa.selenium.support.PageFactory;
  * Description  :
  **/
 
-public class LoginPageStepImpl {
-
-    private final LoginPage loginPage = PageFactory.initElements(DriverHolder.driver, LoginPage.class);
-
+public class LoginPageStepImpl extends BaseStepImpl {
     @Step("On login page")
     public void navigateToLoginPage() {
-        loginPage.navigateToLoginPage();
+        pages().getNavigationBar()
+                .clickOnNavOption(LOG_IN);
     }
 
-    @Step("Login to the application using the email as <email> and password as <password>")
-    public void login(String email, String password) {
-        loginPage.login(email, password);
+    @Step("Login to the application using the username as <username> and password as <password>")
+    public void login(String username, String password) {
+        pages().getLoginPage()
+                .login(username, password);
+    }
+
+    @Step("Logged-in username should be <username>")
+    public void checkLoggedInUsername(String username) {
+        assertEquals(
+                "Welcome " + username,
+                pages().getNavigationBar()
+                        .getGreetingMessage()
+        );
+    }
+
+    @Step("Wrong password error alert should be visible")
+    public void checkInvalidPasswordErrorMessage() {
+        assertEquals(
+                "Wrong password.",
+                uiComponents().getAlertComponent().switchToAlert().getText()
+        );
     }
 }
