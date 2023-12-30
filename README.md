@@ -225,13 +225,13 @@ The following plugin properties can be additionally set:
    
 2. For 32-bit Windows installations, the key you must examine in the registry editor is
    
-   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE**
+   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`
    
 3. For 64-bit Windows installations, the key is
    
-   **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE**
+   `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE`
    
-4. Please note that the **FEATURE_BFCACHE** subkey may or may not be present, and should be created if it is not present.
+4. Please note that the **FEATURE_BFCACHE** sub key may or may not be present, and should be created if it is not present.
    
 5. Inside this key, create a **DWORD** value named **iexplore.exe** with the value of **0**.
     
