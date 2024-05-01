@@ -25,11 +25,6 @@ public class SafariDriverServiceImpl implements WebDriverService {
                 .implicitlyWait(IMPLICIT_WAIT_IN_SECONDS);
     }
 
-    @Override
-    public void closeDriver() {
-        driver.quit();
-    }
-
     public WebDriver getDriver() {
         return driver;
     }

@@ -14,7 +14,9 @@ import org.openqa.selenium.WebDriver;
 public interface WebDriverService {
     void spinUpDriver();
 
-    void closeDriver();
-
     WebDriver getDriver();
+
+    default void closeDriver() {
+        getDriver().quit();
+    }
 }
